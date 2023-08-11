@@ -1,0 +1,25 @@
+includes:
+- configs/FRED/defaults.yaml
+
+setup:
+  Lx: 12
+  Tx: 3 ## should be the same as freq ratio
+  Ty: 4 ## lag = Ty - 1
+  freq_ratio: 3
+  bidirectional_encoder: True
+  model_type: 'transformer'
+  
+train:
+  key_dim_enc: 16
+  key_dim_xdec: 16
+  key_dim_ydec: 16
+  fc_dim_enc: 64
+  fc_dim_xdec: 32
+  fc_dim_ydec: 32
+  ffn_dim_x: 128
+  ffn_dim_y: 128
+  num_heads: 4
+  num_layers: 1
+  dropout_rate: 0.4
+  learning_rate: 0.0008
+  shuffle: False

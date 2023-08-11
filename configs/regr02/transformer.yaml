@@ -1,0 +1,26 @@
+includes:
+- configs/regr02/defaults.yaml
+  
+setup:
+  Lx: 12
+  Tx: 3 ## should be the same as freq ratio
+  Ty: 4 ## lag = Ty - 1
+  freq_ratio: 3
+  bidirectional_encoder: True
+  model_type: 'transformer'
+  
+train:
+  key_dim_enc: 32
+  key_dim_xdec: 32
+  key_dim_ydec: 32
+  fc_dim_enc: 256
+  fc_dim_xdec: 64
+  ffn_dim_x: 768
+  fc_dim_ydec: 128
+  ffn_dim_y: 256
+  num_heads: 1
+  num_layers: 1
+  dropout_rate: 0.1
+  learning_rate: 0.002
+  reduce_LR_factor: 0.5
+  reduce_LR_patience: 10

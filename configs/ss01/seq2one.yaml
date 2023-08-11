@@ -1,0 +1,22 @@
+includes:
+- configs/ss01/defaults.yaml
+
+setup:
+  Lx: 12
+  Ty: 4
+  freq_ratio: 3
+  bidirectional_encoder: False
+  model_type: 'MTMFSeq2One'
+  
+train:
+  n_a: 768
+  n_s: 768
+  n_align: 64
+  fc_x: 256
+  fc_y: 512
+  dropout_rate: 0.1
+  l1reg: 0.0001
+  l2reg: 0.0001
+  learning_rate: 0.0004
+  reduce_LR_factor: 0.5
+  reduce_LR_patience: 10

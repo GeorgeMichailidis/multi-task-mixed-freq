@@ -1,0 +1,17 @@
+data:
+  ds_name: 'ss01_2002'
+  val_size: 500
+  scale_data: True
+  scaler_type: 'minmax'
+
+train:
+  ES_patience: 20
+  batch_size: 64
+  epochs: 800
+  shuffle: True
+
+experiment_setup:
+  test_start_id: 9000
+  test_size: 100
+  horizon: 4
+  eval_metric: 'median_mape_by_step'

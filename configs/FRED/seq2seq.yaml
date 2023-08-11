@@ -1,0 +1,23 @@
+includes:
+- configs/FRED/defaults.yaml
+
+setup:
+  Lx: 12
+  Tx: 3 ## should be the same as freq ratio
+  Ty: 4 ## lag = Ty - 1
+  freq_ratio: 3
+  bidirectional_encoder: False
+  model_type: 'MTMFSeq2Seq'
+  
+train:
+  n_a: 128
+  n_s: 256
+  n_align_x: 16
+  n_align_y: 16
+  fc_x: 256
+  fc_y: 128
+  dropout_rate: 0.4
+  l1reg: 0.0001
+  l2reg: 0.0001
+  learning_rate: 0.0002
+  shuffle: True

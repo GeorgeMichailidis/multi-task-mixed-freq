@@ -1,0 +1,21 @@
+includes:
+- configs/regr02/defaults.yaml
+
+setup:
+  Lx: 12    ## lag_x
+  Ty: 4     ## lag_y + 1
+  Tx: 1     ## dummy
+  freq_ratio: 3
+  model_type: 'MLP'
+  
+train:
+  hidden_dim_x: 900         ## hidden dim for x_t on x_lags MLP
+  hidden_dim_y: 900         ## hidden dim for y_t on {y_lags, x_lags} MLP
+  activation_x: 'relu'
+  activation_y: 'relu'
+  architect_x: 'concat'
+  architect_y: 'concat'
+  dropout_rate: 0.4
+  learning_rate: 0.0005
+  reduce_LR_factor: 0.75
+  reduce_LR_patience: 5

@@ -1,0 +1,23 @@
+includes:
+- configs/FRED/defaults.yaml
+
+setup:
+  Lx: 12    ## lag_x
+  Tx: 1     ## dummy
+  Ty: 4     ## lag_y + 1
+  freq_ratio: 3
+  model_type: 'MLP'
+
+train:
+  hidden_dim_x: 512          ## hidden dim for x_t on x_lags MLP
+  architect_x: 'stack'
+  activation_x: 'relu'
+  hidden_dim_y: 512          ## hidden dim for y_t on {y_lags, x_lags} MLP
+  architect_y: 'stack'
+  activation_y: 'relu'
+  dropout_rate: 0.4
+  l1reg: 0.0001
+  l2reg: 0.0001
+  learning_rate: 0.0002
+  shuffle: True
+

@@ -1,0 +1,19 @@
+includes:
+- configs/FRED/defaults.yaml
+
+setup:
+  Lx: 12 ## lag_x
+  Ty: 4  ## lag_y + 1
+  freq_ratio: 3
+  model_type: 'RNN'
+  
+train:
+  n_a: 128          ## hidden dim for x_t RNN
+  n_s: 256          ## hidden dim for y_t RNN
+  fc_x: 256
+  fc_y: 128
+  dropout_rate: 0.4
+  l1reg: 0.0001
+  l2reg: 0.0001
+  learning_rate: 0.0002
+  shuffle: True

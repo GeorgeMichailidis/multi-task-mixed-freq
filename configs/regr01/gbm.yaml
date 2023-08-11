@@ -1,0 +1,33 @@
+includes:
+- configs/regr01/defaults.yaml
+
+setup:
+  Lx: 12    ## lag_x
+  Ty: 4     ## lag_y + 1
+  Tx: 1     
+  freq_ratio: 3
+  model_type: 'GBM'
+  
+hyper_params_x:
+  objective: 'regression'
+  boosting_type: 'gbdt'
+  num_leaves: 127
+  learning_rate: 0.05
+  n_estimators: 1000
+  min_child_samples: 10
+  feature_fraction: 0.8
+  verbose: -1
+  metric: 'l2'
+  early_stopping_round: 20
+
+hyper_params_y:
+  objective: 'regression'
+  boosting_type: 'gbdt'
+  num_leaves: 127
+  learning_rate: 0.05
+  n_estimators: 1000
+  min_child_samples: 10
+  feature_fraction: 0.8
+  verbose: -1
+  metric: 'l2'
+  early_stopping_round: 20

@@ -1,0 +1,28 @@
+includes:
+- configs/ss00/defaults.yaml
+
+setup:
+  Lx: 24
+  Tx: 12
+  Ly: 8
+  Ty: 4
+  freq_ratio: 3
+  model_type: 'NHiTS'
+
+run_params:
+  scale_data: False
+  batch_size: 32
+  learning_rate: 0.001
+  epochs: 100
+  ES_patience: 30
+  gradient_clip: 0.5
+  enable_progress_bar: False
+
+hyper_params:
+  num_stacks: 2
+  num_blocks: 1
+  num_layers: 2
+  layer_widths: 256
+  dropout_rate: 0.1
+  reduce_on_plateau_patience: 5
+  reduce_on_plateau_factor: 0.5
