@@ -1,0 +1,27 @@
+ >> UMCSENTx (University of Michigan: Consumer Sentiment (Index 1st Quarter 1966=100)) has NA values on ['2059-03-31', '2059-09-30']
+FIRST DATA DATE = 1973-03-31 00:00:00, LAST DATA DATE = 2022-03-31 00:00:00
+ >> NONREVSL (Total Nonrevolving Credit) has NA values on ['2022-05-31']
+ >> DTCTHFNM (Total Consumer Loans and Leases Outstanding) has NA values on ['2022-05-31']
+ >> CP3Mx (3-Month AA Financial Commercial Paper Rate) has NA values on ['2020-04-30']
+ >> S&P div yield (S&P Composite Common Stock: Dividend Yield) has NA values on ['2022-04-30', '2022-05-31']
+ >> S&P PE ratio (S&P Composite Common Stock: Price-Earnings Ratio) has NA values on ['2022-05-31']
+FIRST DATA DATE = 1973-01-31 00:00:00, LAST DATA DATE = 2022-04-30 00:00:00
+ >> UMCSENTx (University of Michigan: Consumer Sentiment (Index 1st Quarter 1966=100)) has NA values on ['2059-03-31', '2059-09-30']
+FIRST DATA DATE = 1973-03-31 00:00:00, LAST DATA DATE = 2022-03-31 00:00:00
+ >> S&P PE ratio (S&P Composite Common Stock: Price-Earnings Ratio) has NA values on ['2022-05-31']
+ >> AWHI (Indexes of Aggregate Weekly Hours of Production and Nonsupervisory Employees, Total Private (Index 2002 = 100)) has NA values on ['2059-01-31', '2059-02-28', '2059-03-31', '2059-04-30', '2059-05-31', '2059-06-30', '2059-07-31', '2059-08-31', '2059-09-30', '2059-10-31', '2059-11-30', '2059-12-31', '2060-01-31', '2060-02-29', '2060-03-31', '2060-04-30', '2060-05-31', '2060-06-30', '2060-07-31', '2060-08-31', '2060-09-30', '2060-10-31', '2060-11-30', '2060-12-31', '2061-01-31', '2061-02-28', '2061-03-31', '2061-04-30', '2061-05-31', '2061-06-30', '2061-07-31', '2061-08-31', '2061-09-30', '2061-10-31', '2061-11-30', '2061-12-31', '2062-01-31', '2062-02-28', '2062-03-31', '2062-04-30', '2062-05-31', '2062-06-30', '2062-07-31', '2062-08-31', '2062-09-30', '2062-10-31', '2062-11-30', '2062-12-31', '2063-01-31', '2063-02-28', '2063-03-31', '2063-04-30', '2063-05-31', '2063-06-30', '2063-07-31', '2063-08-31', '2063-09-30', '2063-10-31', '2063-11-30', '2063-12-31']
+FIRST DATA DATE = 1973-01-31 00:00:00, LAST DATA DATE = 2022-04-30 00:00:00
+writing file to data_FRED/202207.xlsx ...
+ >> sheet_name = QVAR_LEVELS, shape = (253, 23), from = 2059-03-31, to = 2022-03-31
+ >> sheet_name = QVAR_LEVELS_FILLED, shape = (253, 23), from = 2059-03-31, to = 2022-03-31
+ >> sheet_name = y, shape = (197, 23), from = 1973-03-31, to = 2022-03-31
+ >> sheet_name = MVAR_LEVELS, shape = (761, 91), from = 2059-01-31, to = 2022-05-31
+ >> sheet_name = MVAR_LEVELS_FILLED, shape = (761, 91), from = 2059-01-31, to = 2022-05-31
+ >> sheet_name = x, shape = (592, 91), from = 1973-01-31, to = 2022-04-30
+ >> sheet_name = QVAR_LEVELS_S, shape = (253, 17), from = 2059-03-31, to = 2022-03-31
+ >> sheet_name = QVAR_LEVELS_FILLED_S, shape = (253, 17), from = 2059-03-31, to = 2022-03-31
+ >> sheet_name = y_small, shape = (197, 17), from = 1973-03-31, to = 2022-03-31
+ >> sheet_name = MVAR_LEVELS_S, shape = (761, 22), from = 2059-01-31, to = 2022-05-31
+ >> sheet_name = MVAR_LEVELS_FILLED_S, shape = (761, 22), from = 2059-01-31, to = 2022-05-31
+ >> sheet_name = x_small, shape = (592, 22), from = 1973-01-31, to = 2022-04-30
+data_FRED/202207.xlsx created/updated on 2023-08-10 23:25:59

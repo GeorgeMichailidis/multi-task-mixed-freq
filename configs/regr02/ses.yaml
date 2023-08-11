@@ -1,0 +1,7 @@
+includes:
+- configs/regr02/defaults.yaml
+
+setup:
+  freq_ratio: 3
+  model_type: 'SES'
+  alpha: 0.5

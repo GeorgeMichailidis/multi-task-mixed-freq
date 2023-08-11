@@ -1,0 +1,28 @@
+basics:
+  vintage: '202207'
+  log_file: 'logs/FRED/datacleaning_202207.log'
+  folder: 'data_FRED'
+  dictionary_file: 'data_dictionary.xlsx'
+  dictionary_sheet: 'main'
+  
+quarterly:
+  QFILE: '202207_QRaw.csv'
+  QSTART: '3/31/1960'
+  QEND: '3/31/2022'
+  QSTART_ROW: 2
+
+monthly:
+  MFILE: '202207_MRaw.csv'
+  MSTART: '1/31/1960'
+  MEND: '4/30/2022'
+  MSTART_ROW: 1
+  MFILL:
+    'S&P div yield': {'2022-04-30':1.41}
+    #'S&P PE ratio': {'2022-02-28':22.42,'2022-03-31':22.19, '2022-04-30':22.19}
+  
+small: ## anything special for the small dataset?
+  nested: 0
+  MSTART_small: '1/31/1964'
+  MEND_small: '4/30/2022'
+  QSTART_small: '3/31/1964'
+  QEND_small: '3/31/2022'

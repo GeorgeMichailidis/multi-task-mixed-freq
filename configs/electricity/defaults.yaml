@@ -1,0 +1,21 @@
+data:
+  ds_name: 'electricity'
+  scale_data: True
+  n_val: 0.1
+  freq_ratio: 6
+  scaler_type: 'standard' ## choose between 'standard' and 'minmax'
+  X_COLNAME: 'price_actual' ## for selected plotting
+  Y_COLNAME: 'load_actual' ## for selected plotting
+
+train:
+  reduce_LR_monitor: 'val_loss' ## set to '' if no reduce_LR, otherwise, put in the quantity to be monitored
+  reduce_LR_factor: 0.5 ## inactive if reduce_LR_monitor == ''
+  reduce_LR_patience: 10 ## inactive if reduce_LR_monitor == ''
+  ES_patience: null
+  epochs: 300
+  batch_size: 32
+  
+forecast:
+  horizon: 4
+  first_prediction_date: '2018-07-01 00:00:00'
+

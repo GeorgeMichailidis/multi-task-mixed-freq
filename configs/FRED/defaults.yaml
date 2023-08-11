@@ -1,0 +1,20 @@
+data:
+  ds_name: '202207'
+  scale_data: True
+  n_val: null
+  scaler_type: 'minmax' ## choose between 'standard' and 'minmax'
+  X_COLNAME: 'UNRATE' ## for selected plotting
+  Y_COLNAME: 'GDPC1'  ## for selected plotting
+
+train:
+  reduce_LR_monitor: '' ## set to '' if no reduce_LR, otherwise, put in the quantity to be monitored
+  reduce_LR_factor: 0.5 ## inactive if reduce_LR_monitor == ''
+  reduce_LR_patience: 10 ## inactive if reduce_LR_monitor == ''
+  ES_patience: null
+  epochs: 300
+  batch_size: 32
+  
+forecast:
+  horizon: 4
+  first_prediction_date: '2018-03-31'
+

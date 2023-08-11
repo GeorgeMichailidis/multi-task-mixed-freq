@@ -1,0 +1,24 @@
+includes:
+- configs/regr01/defaults.yaml
+
+setup:
+  Lx: 12
+  Tx: 12
+  Ly: 4
+  Ty: 4
+  freq_ratio: 3
+  model_type: 'ARIMA'
+
+hyper_params_x:
+  p: 12
+  d: 0
+  q: 0
+  scaler_type: 'minmax'
+
+hyper_params_y:
+  p: 4
+  d: 0
+  q: 0
+  scaler_type: 'minmax'
+
+
