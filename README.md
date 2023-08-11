@@ -76,18 +76,16 @@ The raw data are retrived from the FRED database https://research.stlouisfed.org
     Two variables that are used in running mfbVAR are not present in the monthly/quarterly compilation and need to be downloaded separately; their data should be added as new columns to the monthly/quarter raw csv files, respectively.
     * AWHI (monthly): https://fred.stlouisfed.org/series/AWHI
     * FPIC1 (quarterly): https://fred.stlouisfed.org/series/FPIC1
-    * FPIC1 (from BEA, used for recast): https://apps.bea.gov/iTable/?isuri=1&reqid=19&step=4&categories=flatfiles&nipa_table_list=1 (Section 5, sheet T50303-Q, Line 9)
+    * A007RA (from BEA, used for recasting FPIC1 given that the series has a longer history): https://apps.bea.gov/iTable/?isuri=1&reqid=19&step=4&categories=flatfiles&nipa_table_list=1 (Section 5, sheet T50303-Q, Line 9)
 
-    Note that FPIC1 needs to be recasted the same way as described in the mfbVAR paper. 
+    Note that FPIC1 needs to be recasted based on A007RA, that is, based on the data from BEA and FRED respectively, one obtains a ratio between the two series based on the period where data from both sources are available (i.e., 1Q2002 onwards), and then backfills the missing historical values prior to 1Q2002 for the latter.
 
-    The above step gives rise to the edited files YYYYMM\_MRaw.csv and YYYYMM\_QRaw.csv, in which additional columns have been added. 
+    The above step gives rise to the edited files `YYYYMM_MRaw.csv` and `YYYYMM_QRaw.csv`, in which additional columns have been added. 
 
-* Perform necessary data cleaning, including fill in missing values and applying transformation:
+* Perform necessary data cleaning, including filling in missing values and applying transformation; this should give rise to `YYYYMM.xlsx`
     ```console
     bash 11-fred-data-clean.sh
     ```
-
-    For the sake of completeness, the data after cleaning and transformation has been included in the repository as `data_FRED/202207.xlsx`. 
 
 ### Run model
 
