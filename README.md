@@ -1,8 +1,20 @@
 # Multi-Task Encoder-Dual-Decoder for Mixed Frequency Data Prediction 
 
-This repository hosts the code used in the paper titled "A Multi-Task Encoder-Dual-Decoder Framework for Mixed Frequency Data Prediction". 
+This repository hosts the code used in the paper titled "A Multi-Task Encoder-Dual-Decoder Framework for Mixed Frequency Data Prediction". (Copyright 2023) Jiahe Lin and George Michailidis
 
-(Copyright 2023) Jiahe Lin and George Michailidis
+To cite the paper: J. Lin and G. Michailidis, A multi-task encoder-dual-decoder framework for mixed frequency data prediction. International Journal of Forecasting (2023), https://doi.org/10.1016/j.ijforecast.2023.08.003.
+```
+@article{LIN2023,
+title = {A multi-task encoder-dual-decoder framework for mixed frequency data prediction},
+journal = {International Journal of Forecasting},
+author = {Jiahe Lin and George Michailidis},
+year = {2023},
+issn = {0169-2070},
+doi = {https://doi.org/10.1016/j.ijforecast.2023.08.003},
+url = {https://www.sciencedirect.com/science/article/pii/S016920702300078X}
+}
+```
+
 
 # Setup
 
@@ -35,7 +47,6 @@ To facilitate users in traversing the repository, we highlight the major compone
 * `configs/`: hosts the yaml files that stored the configuration used for running all the experiments in python.
 * `R/`: hosts the R implementation of midasr and mfbvar as competing methods for running synthetic data experiments. In particular, the corresponding configs are saved under `R/configs` and please refer to `R/bin` to see how to run them. 
 * `data_*/`: currently hosts the scripts used for pre-processing the underlying raw data. Note that the data themselves are not included in this repository; in the experiments, these folders should also be the location where the raw and the cleaned data are saved. Follow the instructions in the experiment sections to see how to generate or download/process the data. 
-* `output_*/`: currently hosts the jupyter-notebooks where results are being collected and displayed. For the sake of completeness, in `output_sim/`, we also include the reported metrics (see Tables 2 \& 3 in the manuscript) in xlsx format. These folders are also where the experiment outputs are directed to.
 
 # Synthetic Data Experiments
 
@@ -58,7 +69,6 @@ bash 03-run-simUni.sh
 ```
 * A folder will be created under `output_sim/.` as the model is being trained and the forecast results being generated. The train and validation loss are saved down as a png in the folder, together with some other model information (e.g., architecture) and randomly selected columns for visualization of the fit. Raw error metrics are saved as an excel file, evaluated according to the description in the manuscript.  
 * **Note that in the paper, we report the normalized error, that is, the raw error metric normalized by that of the simple exponential smoother.**
-* Refer to `output_sim/collect_sim_results.ipynb` for compiling the results and generating the reported metrics in the tables presented in the paper.
 
 # Real Data Experiments
 
@@ -95,7 +105,6 @@ To run model and gather output
 bash 12-runfred.sh
 ```
 * Similar to the case of synthetic data experiments, as the model is being trained, files (e.g., loss over epoch, model summary etc) will be saved to the designated folder under `output_FRED/` for easier diagnostics. Meanwhile, raw prediction files are saved as well. 
-* Output is collected and plots are generated through `output_FRED/collect_FRED_results.ipynb`.
 
 ## Electricity Dataset
 
@@ -108,4 +117,3 @@ bash 12-runfred.sh
 ## toggle accordingly to switch among supported methods
 bash 20-runelec.sh
 ```
-* Output is collected and displayed in `output_electricity/collect_elec_results.ipynb`
